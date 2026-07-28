@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb">
+    <title>Fundamentals of Computing Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><text y=%22.9em%22 font-size=%2290%22 fill=%22white%22>💻</text></svg>">
+</head>
+<body>
+    <div class="app-container">
+        <section id="home-screen" class="screen active">
+            <div class="card home-card">
+                <div class="badge">Official Question Bank</div>
+                <h1>Fundamentals of Computing Quiz</h1>
+                <p class="subtitle">Test your knowledge with 500 comprehensive computing questions.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-value">500</span>
+                        <span class="stat-label">Total Questions</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">450</span>
+                        <span class="stat-label">MCQs</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">50</span>
+                        <span class="stat-label">True / False</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="btn-continue" class="btn btn-secondary hidden">Continue Quiz</button>
+                    <button id="btn-start" class="btn btn-primary">Start Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-screen" class="screen">
+            <header class="quiz-header">
+                <div class="quiz-info">
+                    <span id="question-number">Question 1 / 500</span>
+                    <button id="btn-submit-early" class="btn-text">Submit Quiz</button>
+                </div>
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+            </header>
+
+            <main class="quiz-body">
+                <div class="card question-card">
+                    <h2 id="question-text">Question text will appear here...</h2>
+                </div>
+
+                <div id="options-container" class="options-grid">
+                    </div>
+
+                <div class="quiz-navigation">
+                    <button id="btn-prev" class="btn btn-outline" disabled>Previous</button>
+                    <button id="btn-next" class="btn btn-primary">Next</button>
+                </div>
+
+                <div class="palette-container card">
+                    <div class="palette-header">
+                        <h3>Question Palette</h3>
+                        <div class="palette-legend">
+                            <span class="legend-item"><span class="dot current"></span> Current</span>
+                            <span class="legend-item"><span class="dot answered"></span> Answered</span>
+                            <span class="legend-item"><span class="dot not-visited"></span> Not Visited</span>
+                        </div>
+                    </div>
+                    <div id="question-palette" class="palette-grid">
+                        </div>
+                </div>
+            </main>
+        </section>
+
+        <section id="result-screen" class="screen">
+            <div class="card result-card">
+                <h2>Quiz Completed!</h2>
+                <div class="score-circle">
+                    <span id="result-percentage">0%</span>
+                    <span id="result-score">Score: 0 / 500</span>
+                </div>
+
+                <div class="result-stats-grid">
+                    <div class="res-stat-item correct">
+                        <span class="res-value" id="res-correct">0</span>
+                        <span class="res-label">Correct</span>
+                    </div>
+                    <div class="res-stat-item wrong">
+                        <span class="res-value" id="res-wrong">0</span>
+                        <span class="res-label">Wrong</span>
+                    </div>
+                    <div class="res-stat-item unattempted">
+                        <span class="res-value" id="res-unattempted">0</span>
+                        <span class="res-label">Unattempted</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="btn-review" class="btn btn-primary">Review Answers</button>
+                    <button id="btn-restart" class="btn btn-secondary">Restart Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="review-screen" class="screen">
+            <header class="review-header card">
+                <h2>Review Answers</h2>
+                <button id="btn-back-result" class="btn btn-outline">Back to Summary</button>
+            </header>
+            <main id="review-list" class="review-list">
+                </main>
+        </section>
+    </div>
+
+    <script src="quiz.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
